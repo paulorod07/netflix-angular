@@ -8,6 +8,16 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   user: string = 'Paulo';
 
+  menuOpened = false;
+
+  setMenuState(state: boolean) {
+    this.menuOpened = state;
+  }
+
+  closeMenu() {
+    this.menuOpened = false;
+  }
+
   listTitles = [{
     trailer: 'assets/videos/trailer_guardioes_da_galaxia_1080p.mp4',
     cover: 'assets/images/guardios-da-galaxia.jpg',
